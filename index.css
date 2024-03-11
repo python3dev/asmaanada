@@ -1,0 +1,51 @@
+.acc{
+    font-family: "Kode Mono", monospace;
+    animation:
+    typing 2s steps(40, end),
+    bordere .75s step-end infinite;
+    width: 495px;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+@keyframes typing {
+
+    from,
+    to {
+        width: 0
+    }
+
+    to {
+        width: 432px
+    }
+}
+@keyframes bordere {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: black;
+    }
+
+}
+.a{
+    font-family: "Kode Mono", monospace;
+}
+.acc1{
+    font-family: "Kode Mono", monospace;
+}
+@media screen and (max-width:500px) {
+    .acc{
+        font-family: "Kode Mono", monospace;
+        font-size: 18px;
+        width: 275px;
+    }
+    .acc1{
+        font-size: 18px;
+    }
+    
+}

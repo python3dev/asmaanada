@@ -56,7 +56,7 @@ html{
     }
 
     to {
-        width: 255px
+        width: 270px
     }
 }
 .a{
@@ -69,13 +69,13 @@ html{
     .acc{
         font-family: "Kode Mono", monospace;
         font-size: 18px;
-        width: 275px;
+        width: 270px;
     }
     .acc1{
         font-size: 18px;
     }
     .acc{
-        width: 255px;
+
           animation:typings 2s steps(40, end),
                     bordere .75s step-end infinite;
     }

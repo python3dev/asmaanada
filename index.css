@@ -1,12 +1,28 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.centerdiv{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    height: 100vh;
+}
 .acc{
     font-family: "Kode Mono", monospace;
+    border-right: 4px solid black;
     animation:
     typing 2s steps(40, end),
     bordere .75s step-end infinite;
-    width: 495px;
+    width: 465px;
     white-space: nowrap;
     overflow: hidden;
 
+}
+html{
+    height: 100vh;
 }
 
 @keyframes typing {
@@ -24,13 +40,24 @@
 
     from,
     to {
-        border-color: transparent
+        border-color: transparent;
     }
 
     50% {
         border-color: black;
     }
 
+}
+@keyframes typings {
+
+    from,
+    to {
+        width: 0
+    }
+
+    to {
+        width: 255px
+    }
 }
 .a{
     font-family: "Kode Mono", monospace;
@@ -46,6 +73,11 @@
     }
     .acc1{
         font-size: 18px;
+    }
+    .acc{
+        width: 255px;
+          animation:typings 2s steps(40, end),
+                    bordere .75s step-end infinite;
     }
     
 }

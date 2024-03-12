@@ -1,29 +1,120 @@
-body{
-    margin: 0;
-    padding: 0;
-}
-.centerdiv{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-
+body {
     height: 100vh;
+    margin: 0;
+    left: 0;
+    right: 0;
+    
 }
-.acc{
+
+.navbar .d {
+    display: none;
+}
+
+.logi {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    background-color: #e3f2fd;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.navbar button {
+    border: 0;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(57, 135, 252);
+    margin-right: 10px;
+    color: white;
+
+}
+
+.navbar button:hover {
+    background-color: #1b66c9;
+    box-shadow: 0px 1px 0px 0px black;
+
+}
+
+
+.navbar a {
+    color: rgba(0, 0, 0, .55);
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #000;
+}
+
+.navbar h1 {
+    font-size: 20px;
+    margin-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,255,250,1) 0%, rgba(4,108,251,1) 60%, rgba(0,110,255,1) 68%);
+    height: 70%;
+
+
+}
+
+.top-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.thedown {
+    display: flex;
+    /* flex-grow: 1; */
+    text-align: center;
+    align-items: center;
+}
+
+.welcoming {
+
+    color: rgb(195, 34, 128);
+    border-right: 2px solid orange;
     font-family: "Kode Mono", monospace;
-    border-right: 4px solid black;
-    animation:
-    typing 2s steps(40, end),
-    bordere .75s step-end infinite;
-    width: 465px;
+    padding-right: 10px;
     white-space: nowrap;
+
+
+    animation:
+        typing 2s steps(40, end),
+        bordere .75s step-end infinite;
+
     overflow: hidden;
 
+
+    margin: 0;
+
+
+
 }
-html{
-    height: 100vh;
+
+.welcoming1 {
+    color: rgb(195, 34, 128);
+    font-family: "Kode Mono", monospace;
 }
+
 
 @keyframes typing {
 
@@ -36,48 +127,118 @@ html{
         width: 432px
     }
 }
-@keyframes bordere {
 
-    from,
-    to {
-        border-color: transparent;
-    }
-
-    50% {
-        border-color: black;
-    }
-
-}
-@keyframes typings {
-
-    from,
-    to {
+@keyframes typingsx {
+    from {
         width: 0
     }
 
     to {
-        width: 270px
+        width: 260px;
     }
 }
-.a{
-    font-family: "Kode Mono", monospace;
-}
-.acc1{
-    font-family: "Kode Mono", monospace;
-}
-@media screen and (max-width:500px) {
-    .acc{
-        font-family: "Kode Mono", monospace;
-        font-size: 18px;
-        width: 270px;
-    }
-    .acc1{
-        font-size: 18px;
-    }
-    .acc{
 
-          animation:typings 2s steps(40, end),
-                    bordere .75s step-end infinite;
+@keyframes bordere {
+
+    from,
+    to {
+        border-color: transparent
     }
-    
+
+    50% {
+        border-color: orange;
+    }
+
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange;
+    }
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    flex-direction: column;
+
+    transform: translateY(200px);
+    animation-fill-mode: forwards;
+    animation: show-in 0.5s linear;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.content h1 {
+    color: #1b66c9;
+
+}
+
+.content p {
+    text-align: center;
+}
+
+@keyframes show-in {
+
+    50% {
+        transform: translateY(100px);
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
+
+}
+
+/* Phone Parent Configure */
+@media only screen and (max-width:500px) {
+
+    .navbar a {
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .navbar button {
+        display: none;
+    }
+
+    .navbar .d {
+        display: block;
+        width: 15px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    .logi {
+        display: block;
+        padding-top: 0px;
+        font-size: 9px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .welcoming:not(p) {
+        font-size: 20px;
+        width: 260px;
+        animation: typingsx 2s steps(40, end), blink-caret .75s step-end infinite;
+    }
+
+    .content h1 {
+        font-size: 24px;
+
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    .container {
+        height: 400px;
+    }
 }

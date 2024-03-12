@@ -204,7 +204,8 @@ body {
         white-space: nowrap;
     }
     .navbar h1{
-        font-size:14px;
+        font-size:10px;
+        white-space:nowrap;
     }
 
     .navbar button {

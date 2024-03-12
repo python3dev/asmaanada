@@ -203,6 +203,9 @@ body {
         font-size: 12px;
         white-space: nowrap;
     }
+    .navbar h1{
+        font-size:14px;
+    }
 
     .navbar button {
         display: none;
